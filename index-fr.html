@@ -4,24 +4,39 @@
     <meta charset="utf-8"/>
     <title>Justin Duplessis</title>
     <style type="text/css">
-      .content {
-        padding: 25px;
-        margin: 15px;
-        background-color: rgba(255, 255, 255, 0.92);
-        position: absolute;
-        left: 50%;
-        width:  50em;
-        margin-left: -25em;
-      }
-      body {
-        background-image: url("img.jpg");
-      }
-      a {
-        color: #00c5c8;
-      }
-      a:hover {
-        color: #ff5aae;
-      }
+    h1 {
+      margin-top: 0em;
+    }
+    .content {
+      padding: 1.5em;
+      margin: 2em;
+      background-color: rgba(255, 255, 255, 0.92);
+      position: absolute;
+      left: 50%;
+      width:  50em;
+      margin-left: -25em;
+      border: 0.2em solid #ff00ff;
+      outline: 0.4em solid rgba(255, 255, 255, 0.92);
+    }
+    .column-content {
+      padding: 0.5em;
+      padding-left: 0em;
+    }
+    body {
+      background-image: url("img.jpg");
+    }
+    a {
+      color: #00c5c8;
+    }
+    a:hover {
+      color: #ff5aae;
+    }
+    img {
+      vertical-align: middle;
+    }
+    span {
+      vertical-align: middle;
+    }
     </style>
   </head>
 <body>
@@ -34,9 +49,19 @@
     </center>
     <hr>
     <center><small><a href="index.html">In english</a></small></center>
-    <p>Développeur full-stack</p>
-    <p>Enthousiaste Linux et du logiel libre</p>
-    <a href="https://github.com/jdupl">Mon Github</a>
+
+    <div class="column-content">
+      <img src="bullet.gif">
+      <span>Développeur full-stack</span>
+    </div>
+    <div class="column-content">
+      <img src="bullet.gif">
+      <span>Enthousiaste Linux et du logiel libre</span>
+    </div>
+    <div class="column-content">
+      <img src="bullet.gif">
+      <span><a href="https://github.com/jdupl">Mon Github</a></span>
+    </div>
     <br/>
     <br/>
     <hr>

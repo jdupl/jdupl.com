@@ -18,6 +18,10 @@
         border: 0.2em solid #ff00ff;
         outline: 0.4em solid rgba(255, 255, 255, 0.92);
       }
+      .column-content {
+        padding: 0.5em;
+        padding-left: 0em;
+      }
       body {
         background-image: url("img.jpg");
       }
@@ -26,6 +30,12 @@
       }
       a:hover {
         color: #ff5aae;
+      }
+      img {
+        vertical-align: middle;
+      }
+      span {
+        vertical-align: middle;
       }
     </style>
   </head>
@@ -39,9 +49,18 @@
     </center>
     <hr>
     <center><small><a href="index-fr.html">En français</a></small></center>
-    <p><img src="bullet.gif">Full-stack developer</p>
-    <p><img src="bullet.gif">Linux and free software enthousiast</p>
-    <a href="https://github.com/jdupl"><img src="bullet.gif">My Github</a>
+    <div class="column-content">
+      <img src="bullet.gif">
+      <span>Full-stack developer</span>
+    </div>
+    <div class="column-content">
+      <img src="bullet.gif">
+      <span>Linux and free software enthousiast</span>
+    </div>
+    <div class="column-content">
+      <img src="bullet.gif">
+      <span><a href="https://github.com/jdupl">My Github</a></span>
+    </div>
     <br/>
     <br/>
     <hr>
