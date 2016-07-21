@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8"/>
     <title>Justin Duplessis</title>
-    <link rel="stylesheet" type="text/css" href="/assets/main.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/main.css"/>
   </head>
-<body>
+  <body ng-app="app">
   <div class="container">
     <div class="content-header">
       <center>
@@ -16,38 +16,34 @@
       </center>
     </div>
     <hr>
-    <div class="content">
-      <center><small><a href="/fr/index.html">En français</a></small></center>
-      <p>
-        Hi! I'm a full-stack developer and free software enthusiast. Here is some stuff I do.
-      </p>
-      <div class="content-item">
-        <img src="/assets/bullet.gif">
-        <span>Software projects: <a href="https://github.com/jdupl">Github</a></span>
+    <div ng-controller="Lang">
+      <div ng-show="is('en')">
+        <center><small><a ng-click="switchToLang('fr')">En français</a></small></center>
       </div>
-      <div class="content-item">
-        <img src="/assets/bullet.gif">
-        <span><a href="/research.html">Personnal and academic research</a></span>
-      </div>
-      <div class="content-item">
-        <img src="/assets/bullet.gif">
-        <span><a href="/servers.html">My servers</a></span>
+      <div ng-show="is('fr')">
+        <center><small><a ng-click="switchToLang('en')">In english</a></small></center>
       </div>
     </div>
+    <div ng-view autoscroll="true"></div>
     <hr>
     <div class="content-footer">
       <center>
-        <a href="/id_rsa.pub">SSH</a>
+        <a href="id_rsa.pub">SSH</a>
         ||
-        <a href="/jduplessis.asc">GPG</a>
+        <a href="jduplessis.asc">GPG</a>
       </center>
     </div>
     <div class="content-footer">
       <center>BTC: <a href="bitcoin:115QpGFsqHpxRwuYwKFJqhDXFvwq5BZgTx?label=jdupl">115QpGFsqHpxRwuYwKFJqhDXFvwq5BZgTx</a></center>
+      <center>DASH: <a href="dash:Xis879Q4NJfQSWrGFv3XuDvjD3f6xvosvw?label=jdupl">Xis879Q4NJfQSWrGFv3XuDvjD3f6xvosvw</a></center>
       <center>LTC: <a href="litecoin:LUx8hRRLVtJs2HjptEo4Hk4ddihzJcBxBu?label=jdupl">LUx8hRRLVtJs2HjptEo4Hk4ddihzJcBxBu</a></center>
       <center>DOGE: <a href="dogecoin:DLnHVkWpPD2NmQi5SS29WdaZ3frdFuPLNM?label=jdupl">DLnHVkWpPD2NmQi5SS29WdaZ3frdFuPLNM</a></center>
-      <center>DASH: <a href="dash:Xis879Q4NJfQSWrGFv3XuDvjD3f6xvosvw?label=jdupl">Xis879Q4NJfQSWrGFv3XuDvjD3f6xvosvw</a></center>
     </div>
   </div>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controllers/index.js"></script>
+  <script src="controllers/lang.js"></script>
 </body>
 </html>
